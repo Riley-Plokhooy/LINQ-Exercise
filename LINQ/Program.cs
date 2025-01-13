@@ -4,7 +4,19 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var gameNames = new List<string>()
+            {
+                "Doom Eternal",
+                "Warframe",
+                "Minecraft",
+                "Hitman 3",
+                "Forza Horizon 5",
+                "Muck",
+                "No Man's Sky",
+            };
+            
+            var orderedGameNames = gameNames.OrderBy(gameName => gameName.Length).ToList();
+            orderedGameNames.ForEach(game => Console.WriteLine(game));
         }
     }
 }
